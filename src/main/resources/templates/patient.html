@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de pacientes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900">
+<main class="flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-6xl">
+        <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center" >Listado de pacientes hospitalizados</h1>
+        <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400 text-center">Si desea mayor información, contacte con correo@random.cl.</p>
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg content-center" >
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <th scope="col" class="px-6 py-3">ID</th>
+            <th scope="col" class="px-6 py-3">Nombre</th>
+            <th scope="col" class="px-6 py-3">Apellido</th>
+            <th scope="col" class="px-6 py-3">Dirección</th>
+            <th scope="col" class="px-6 py-3">Teléfono</th>
+            <th scope="col" class="px-6 py-3">Email</th>
+            <th scope="col" class="px-6 py-3">Fecha de nacimiento</th>
+            <th scope="col" class="px-6 py-3">Antecedentes médicos</th>
+            </thead>
+            <tbody>
+            <tr th:each="p : ${patients}" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th th:text="${p.getId()}" scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"></th>
+                <td th:text="${p.getName()}" class="px-6 py-4"></td>
+                <td th:text="${p.getLastName()}" class="px-6 py-4"></td>
+                <td th:text="${p.getAddress()}" class="px-6 py-4"></td>
+                <td th:text="${p.getPhone()}" class="px-6 py-4"></td>
+                <td th:text="${p.getEmail()}" class="px-6 py-4"></td>
+                <td th:text="${p.getBirthDate()}" class="px-6 py-4"></td>
+                <td th:text="${p.getMedicalHistory()}" class="px-6 py-4"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+</main>
+</body>
+</html>
