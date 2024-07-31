@@ -1,4 +1,4 @@
-package cl.praxis.proyectohospitalpostpandemia.model.dto;
+package cl.praxis.proyectohospitalpostpandemia.models.dto;
 
 public class Patient {
     private int id;

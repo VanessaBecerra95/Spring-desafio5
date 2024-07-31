@@ -1,6 +1,6 @@
-package cl.praxis.proyectohospitalpostpandemia.model.service;
+package cl.praxis.proyectohospitalpostpandemia.models.service;
 
-import cl.praxis.proyectohospitalpostpandemia.model.dto.Patient;
+import cl.praxis.proyectohospitalpostpandemia.models.dto.Patient;
 
 import java.util.List;
 
@@ -10,4 +10,5 @@ public interface PatientService {
     boolean update(Patient patient);
     boolean create(Patient patient);
     boolean delete(int id);
+    List<Patient> search(String query);
 }
