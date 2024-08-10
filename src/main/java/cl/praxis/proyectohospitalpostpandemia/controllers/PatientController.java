@@ -1,6 +1,6 @@
 package cl.praxis.proyectohospitalpostpandemia.controllers;
 
-import cl.praxis.proyectohospitalpostpandemia.ProyectoHospitalPostPandemiaApplication;
+import cl.praxis.proyectohospitalpostpandemia.HPP;
 import cl.praxis.proyectohospitalpostpandemia.models.dto.Patient;
 import cl.praxis.proyectohospitalpostpandemia.models.service.PatientService;
 import org.slf4j.Logger;
@@ -15,7 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/patients")
 public class PatientController {
 
-    private static final Logger logger = LoggerFactory.getLogger(ProyectoHospitalPostPandemiaApplication.class);
+    private static final Logger logger = LoggerFactory.getLogger(HPP.class);
 
     private PatientService patientService;
 
