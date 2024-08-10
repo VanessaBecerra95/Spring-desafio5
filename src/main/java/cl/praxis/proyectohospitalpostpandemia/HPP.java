@@ -12,7 +12,7 @@ public class HPP {
 
     public static void main(String[] args) {
         SpringApplication.run(HPP.class, args);
-        logger.info("Iniciando Proyecto Hospital Post Pandemia");
+        logger.info("Iniciando Proyecto Hospital Post Pandemia en HPP.java");
     }
 
 }
